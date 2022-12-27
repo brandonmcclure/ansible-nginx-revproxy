@@ -11,7 +11,7 @@
     - nginxrevproxy
 
 - name: Install certbot from repository
-  apt:
+  ansible.builtin.package:
     name: "{{ nginx_revproxy_certbot_packages }}"
     state: present
   when: not nginx_revproxy_certbot_auto
