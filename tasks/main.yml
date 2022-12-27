@@ -1,7 +1,7 @@
 ---
 
 - name: Install Nginx and ssl-cert
-  apt:
+  ansible.builtin.package:
     name:
       - nginx
       - ssl-cert
@@ -16,7 +16,7 @@
     - packages
 
 - name: Install python-passlib for Python 3 hosts
-  apt:
+  ansible.builtin.package:
     name:
       - "python3-passlib"
     state: present
@@ -32,7 +32,7 @@
     - ansible_python['version']['major'] == 3
 
 - name: Install python-passlib for Python 2 hosts
-  apt:
+  ansible.builtin.package:
     name:
       - "python-passlib"
     state: present
