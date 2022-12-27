@@ -73,7 +73,7 @@
     name: "{{ item.value.auth.login }}"
     password: "{{ item.value.auth.password }}"
     owner: root
-    group: www-data
+    group: "{{htpasswd_group}}"
     mode: 0640
   with_dict: "{{ nginx_revproxy_sites }}"
   when:
