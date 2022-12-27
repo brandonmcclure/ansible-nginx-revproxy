@@ -2,3 +2,6 @@
 openssl_package_name: openssl
 passlib_package_name: python-passlib
 htpasswd_group: http
+nginx_revproxy_certbot_packages:
+  - certbot
+  - certbot-nginx
