@@ -4,7 +4,7 @@
   ansible.builtin.package:
     name:
       - nginx
-      - ssl-cert
+      - openssl
     state: present
   register:
     nginxinstalled
