@@ -155,8 +155,8 @@
     dest: /var/www/{{ item.key }}/.well-known
     mode: 0775
     state: directory
-    owner: www-data
-    group: www-data
+    owner: "{{htpasswd_group}}"
+    group: "{{htpasswd_group}}"
   with_dict: "{{ nginx_revproxy_sites }}"
   notify: Reload Nginx
   when:
@@ -169,8 +169,8 @@
     dest: /var/www/{{ item.key }}
     mode: 0775
     state: directory
-    owner: www-data
-    group: www-data
+    owner: "{{htpasswd_group}}"
+    group: "{{htpasswd_group}}"
     recurse: true
   with_dict: "{{ nginx_revproxy_sites }}"
   notify: Reload Nginx
