@@ -25,7 +25,7 @@
 - name: Install python-passlib for Python 3 hosts
   ansible.builtin.package:
     name:
-      - "python3-passlib"
+      - "{{passlib_package_name}}"
     state: present
   register:
     result

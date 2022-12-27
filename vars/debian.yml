@@ -1,2 +1,3 @@
 ---
 openssl_package_name: ssl-cert
+passlib_package_name: python3-passlib
